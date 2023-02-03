@@ -36,7 +36,7 @@ const SignIn = () => {
         navigate("/");
       }
     } catch (error) {
-      toast.error("Bad user credentials");
+      toast.error("Bad user credentials!");
     }
   };
 
