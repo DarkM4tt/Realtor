@@ -16,7 +16,8 @@ import { useNavigate } from "react-router-dom";
 const CreateListing = () => {
   const navigate = useNavigate();
   const auth = getAuth();
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  // const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  const geolocationEnabled = true;
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -31,8 +32,8 @@ const CreateListing = () => {
     offer: false,
     regularPrice: 0,
     discountedPrice: 0,
-    latitude: 0,
-    longitude: 0,
+    latitude: 25.317644,
+    longitude: 82.973915,
     images: {},
   });
 
@@ -134,6 +135,8 @@ const CreateListing = () => {
               case "running":
                 console.log("Upload is running");
                 break;
+              default:
+                console.log("Default case executed.");
             }
           },
           (error) => {

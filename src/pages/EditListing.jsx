@@ -9,22 +9,15 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
-import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  serverTimestamp,
-  updateDoc,
-} from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { db } from "./../firebase";
 import { useNavigate, useParams } from "react-router-dom";
-import { async } from "@firebase/util";
 
 const CreateListing = () => {
   const navigate = useNavigate();
   const auth = getAuth();
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  // const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  const geolocationEnabled = true;
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(null);
 
@@ -169,6 +162,8 @@ const CreateListing = () => {
               case "running":
                 console.log("Upload is running");
                 break;
+              default:
+                console.log("Default case executed.");
             }
           },
           (error) => {
