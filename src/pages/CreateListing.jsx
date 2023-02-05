@@ -32,8 +32,8 @@ const CreateListing = () => {
     offer: false,
     regularPrice: 0,
     discountedPrice: 0,
-    latitude: 25.317644,
-    longitude: 82.973915,
+    latitude: Math.floor(Math.random() * (27 - 23 + 1) + 23),
+    longitude: Math.floor(Math.random() * (84 - 80 + 1) + 80),
     images: {},
   });
 
