@@ -17,7 +17,7 @@ const CreateListing = () => {
   const navigate = useNavigate();
   const auth = getAuth();
   // const [geolocationEnabled, setGeolocationEnabled] = useState(true);
-  const geolocationEnabled = true;
+  const geolocationEnabled = false;
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
