@@ -408,7 +408,7 @@ const CreateListing = () => {
                 value={regularPrice}
                 onChange={onChange}
                 min="4000"
-                max="2000000"
+                max="50000000"
                 required
                 className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
               />
@@ -433,7 +433,7 @@ const CreateListing = () => {
                   value={discountedPrice}
                   onChange={onChange}
                   min="4000"
-                  max="2000000"
+                  max="50000000"
                   required={offer}
                   className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
                 />
