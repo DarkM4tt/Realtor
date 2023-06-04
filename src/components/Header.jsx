@@ -55,6 +55,14 @@ const Header = () => {
             </li>
             <li
               className={` cursor-pointer py-3 text-sm font-semibold text-gray-500 border-b-[3px] border-b-transparent ${
+                pathMatchRoute("/search") && "text-black border-b-red-500"
+              }`}
+              onClick={() => navigate("/search")}
+            >
+              Search
+            </li>
+            <li
+              className={` cursor-pointer py-3 text-sm font-semibold text-gray-500 border-b-[3px] border-b-transparent ${
                 pathMatchRoute("/sign-in") ||
                 (pathMatchRoute("/profile") && "text-black border-b-red-500")
               }`}

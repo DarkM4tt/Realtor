@@ -13,12 +13,13 @@ import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
 import Listing from "./pages/Listing";
 import Category from "./pages/Category";
+import Search from "./pages/Search";
 
 function App() {
   return (
     <>
       <Router>
-        <Header></Header>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<PrivateRoute />}>
@@ -32,6 +33,7 @@ function App() {
             element={<Listing />}
           />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/create-listing" element={<PrivateRoute />}>
             <Route path="/create-listing" element={<CreateListing />} />
